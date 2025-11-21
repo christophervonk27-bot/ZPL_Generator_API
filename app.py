@@ -19,7 +19,7 @@ def generate_zpl():
         #    Wir bauen den Text-String für den ZPL-Drucker
         
         # Erzeuge den Link für den QR-Code (ERSETZE 'DEINE-APP' HIER!)
-        qr_content = f"https://christophervonk27.bubbleapps.io/router?qr_id={qr_code_id}"
+        qr_content = f"https://christophervonk27.bubbleapps.io/version-test/router?qr_id={qr_code_id}"
 
         # ZPL-Code-Vorlage
         # ^BQN... ist der Befehl für einen QR-Code
@@ -45,4 +45,5 @@ def generate_zpl():
 
 # Startet den Server (für Tests)
 if __name__ == '__main__':
+
     app.run(debug=True, port=5001)
