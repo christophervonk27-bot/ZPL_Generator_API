@@ -25,9 +25,7 @@ def generate_zpl():
         # ^BQN... ist der Befehl für einen QR-Code
         zpl_code = f"""
 ^XA
-^FO50,50^A0N,30,30^FDQR-ID: {qr_code_id}^FS
-^FO50,100^BQN,2,8^FDQA,{qr_content}^FS
-^FO50,350^A0N,25,25^FDScan fuer Details^FS
+^FO50,50^A0N,30,30^FDTEST DRUCK ERFOLGREICH^FS
 ^XZ
 """
 
@@ -47,3 +45,4 @@ def generate_zpl():
 if __name__ == '__main__':
 
     app.run(debug=True, port=5001)
+
