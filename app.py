@@ -29,7 +29,7 @@ def generate_zpl():
 
 ^FW R
 
-^FO50,50^BQN,2,20
+^FO50,50^BQN,2,22
 ^FDQA,{qr_content}^FS
 
 ^FO600,50^A0R,40,40^FDZettelFix ID: {qr_code_id}^FS
@@ -53,5 +53,6 @@ def generate_zpl():
 if __name__ == '__main__':
 
     app.run(debug=True, port=5001)
+
 
 
