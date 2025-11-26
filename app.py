@@ -34,7 +34,7 @@ def generate_zpl():
 
 ^FW R
 
-^FO50,50^BQN,2,17
+^FO50,50^BQN,2,8
 ^FDQA,{qr_content_padded}^FS
 
 ^FO600,50^A0R,50,50^FDZettelFix ID: {qr_code_id}^FS
@@ -58,3 +58,4 @@ if __name__ == '__main__':
     # Beispiel für den Aufruf der Funktion (lokale Tests)
     # print(generate_zpl({'qr_code_id': 'AB12345', 'qr_target_url': 'https://deineapp.bubbleapps.io/router'}))
     app.run(debug=True, port=5001)
+
