@@ -23,7 +23,7 @@ def generate_zpl():
         # **LÖSUNG: PADDING**
         # Fügt 30 Leerzeichen hinzu, um die Datenmenge zu erhöhen
         # und den Drucker zur Wahl einer größeren, flächenfüllenden QR-Version zu zwingen.
-        padding = "                              "  # 30 Leerzeichen
+        padding = "                                                                                          "  # 90 Leerzeichen
         qr_content_padded = qr_content + padding
         
         # ZPL-Code-Vorlage (203 DPI, 4x3 Zoll, 90 Grad Drehung)
@@ -35,10 +35,11 @@ def generate_zpl():
 
 ^FW R                      <-- 90 Grad Drehung
 
-^FO50,50^BQN,2,17          <-- Modulgröße 17 (optimal für 4-Zoll-Drucker)
+^FO50,50^BQN,2,8          <-- Modulgröße 17 (optimal für 4-Zoll-Drucker)
 ^FDQA,{qr_content_padded}^FS
 
-^FO550,50^A0R,50,50^FDZettelFix ID: {qr_code_id}^FS <-- Korrigierte X-Koordinate für 90-Grad-Drehung
+^FO600,50^A0R,50,50^FDZettelFix ID: {qr_code_id}^FS <-- Korrigierte X-Koordinate für 90-Grad-Drehung
+^FO690,50^A0R,100,100^FDScan mich! :)^FS
 ^XZ
 """
 
@@ -56,4 +57,5 @@ def generate_zpl():
 # Startet den Server (für Tests)
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
 
