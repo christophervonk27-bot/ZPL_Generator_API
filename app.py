@@ -35,7 +35,7 @@ def generate_zpl():
 
 ^FW R                      <-- 90 Grad Drehung
 
-^FO50,50^BQN,2,8          <-- Modulgröße 17 (optimal für 4-Zoll-Drucker)
+^FO50,50^BQN,2,17          <-- Modulgröße 17 (optimal für 4-Zoll-Drucker)
 ^FDQA,{qr_content_padded}^FS
 
 ^FO600,50^A0R,50,50^FDZettelFix ID: {qr_code_id}^FS <-- Korrigierte X-Koordinate für 90-Grad-Drehung
@@ -57,6 +57,7 @@ def generate_zpl():
 # Startet den Server (für Tests)
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
 
 
 
