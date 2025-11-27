@@ -29,6 +29,7 @@ def generate_zpl():
         # ZPL-Code-Vorlage (203 DPI, 4x3 Zoll, 90 Grad Drehung)
         zpl_code = f"""
 ^XA
+^CI28
 ^LL609^PON                 
 ^PW812                     <-- Fixiert die Breite auf 4 Zoll / 812 Punkte (203 DPI)
 
@@ -55,3 +56,4 @@ def generate_zpl():
 # Startet den Server (für Tests)
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
